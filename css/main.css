@@ -1,0 +1,43 @@
+body
+{
+    background-image: url("../Images/BikiniBottem.jpg");
+}
+
+.content{
+    background-color: antiquewhite;
+    opacity: 0.88;
+}
+.purpleBackground
+{
+    background-color: 	#A020F0;
+    color: white;
+    outline-color: none;
+    border-color: none;
+    padding-bottom: 5px;
+    border-radius: 5px;
+}
+.buttonStyle
+{
+    padding-bottom: 10px;
+}
+
+.purpleBackground:hover
+{
+    background-color: 	#800080;
+}
+.storyPart
+{
+    text-align: center;
+}
+h1{
+    text-align: center;
+}
+
+.spacer
+{
+ padding-bottom: 50px   ;
+}
+
+.mainContent{
+    padding-bottom: 50px;
+}
