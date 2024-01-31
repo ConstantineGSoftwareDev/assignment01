@@ -3,9 +3,13 @@ body
     background-image: url("../Images/BikiniBottem.jpg");
 }
 
+h1{
+    color: 	#004225;
+}
 .content{
     background-color: antiquewhite;
     opacity: 0.88;
+    padding-bottom: 6%;
 }
 .purpleBackground
 {
@@ -33,6 +37,10 @@ h1{
     text-align: center;
 }
 
+.lowerButton
+{
+    justify-content: center;
+}
 .spacer
 {
  padding-bottom: 50px   ;
@@ -41,3 +49,16 @@ h1{
 .mainContent{
     padding-bottom: 50px;
 }
+
+.buffer{
+    height: 5%;
+}
+
+@media only screen and (max-width: 990px) {
+    img{
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        width: 50%;
+    }
+  }

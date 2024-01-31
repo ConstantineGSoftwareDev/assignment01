@@ -3,6 +3,8 @@
 /* Variables
 -------------------------------------------------- */
 // Constants for main button query selectors
+
+const studentIdParagraph = document.querySelector("#studentId")
 const noun1Button = document.querySelector("#noun1"); 
 
 const verbButton = document.querySelector("#verb");
@@ -62,7 +64,14 @@ var currentNoun2Count = 0;
 var currentSettingCount = 0;
 /* Functions
 -------------------------------------------------- */
+function checkStudentIdHeader() {
+    if(studentIdParagraph.textContent=="")
+    {
+        studentIdParagraph.textContent = "Created By: Constantine Grigoriadis - 1234197";
+    }
+}
 function noun1_on_click() {
+    checkStudentIdHeader();
     // variable to get array element and displaying it
     currentNoun1 = noun1[noun1Count];
     noun1Audio(noun1Count);
@@ -120,6 +129,7 @@ function noun1Audio(currentCount)
 }
 
 function verb_on_click() {
+    checkStudentIdHeader();
     currentVerb = verb[currentVerbCount];
     VerbAudio(currentVerbCount);
     // if-else to change count setting
@@ -171,6 +181,7 @@ var verb = ["sat on","ate","danced with","saw","doesn't like","kissed"];
     }
 }
 function adjective_on_click() {
+    checkStudentIdHeader();
     currentAdjective = adjective[currentAdjectiveCount];
     adjectiveAudio(currentAdjectiveCount);
     // if-else to change count setting
@@ -221,6 +232,7 @@ var adjective = ["a funny","a scary","a goofy","a slimy","a barking","a fat"];
     }
 }
 function noun2_on_click() {
+    checkStudentIdHeader();
     currentNoun2 = noun2[currentNoun2Count];
     noun2Audio(currentNoun2Count)
     // if-else to change count setting
@@ -277,6 +289,7 @@ var noun2 = ["goat","monkey","fish","cow","frog","bug","worm"];
     }
 }
 function setting_on_click() {
+    checkStudentIdHeader();
     currentSetting = setting[currentSettingCount];
     settingAudio(currentSettingCount);
     // if-else to change count setting
@@ -329,6 +342,11 @@ var setting = ["on the moon","on the chair","in my spaghetti","in my soup","on t
 }
 // concatenate the user story and display
 function playback_on_click() {
+    if(studentIdParagraph.textContent=="")
+    {
+        studentIdParagraph.textContent = "constantine grigoriadis - 1234197";
+    }
+
     if( currentNoun1 != "" & currentVerb != "" & currentAdjective != "" & currentNoun2!="" & currentSetting !="")
     {
         storyParagraph.classList.remove("alert-danger");
@@ -415,7 +433,8 @@ function randomIntFromInterval(min, max) { // min and max included
 
 // grabbing random element from arrays, concatenate and display
 function random_on_click() {
-   randomNoun1 =  randomIntFromInterval(0,6);
+    checkStudentIdHeader();
+    randomNoun1 =  randomIntFromInterval(0,6);
    randomVerb = randomIntFromInterval(0,5);
    randomAdjective = randomIntFromInterval(0,5);
    randomNoun2 = randomIntFromInterval(0,6);
@@ -454,6 +473,7 @@ function random_on_click() {
 
 function reset_on_click()
 {
+    checkStudentIdHeader();
     currentNoun1 = "";
     currentVerb = "";
     currentAdjective = "";
@@ -474,7 +494,7 @@ function reset_on_click()
     currentSettingOutput.textContent = "";
 
     storyParagraph.textContent = "";
-
+    
 
 }
 /* Event Listeners
@@ -487,4 +507,4 @@ settingButton.addEventListener("click",setting_on_click);
 
 playbackButton.addEventListener("click",playback_on_click);
 randomStoryButton.addEventListener("click",random_on_click);
-resetButton.addEventListener("click", reset_on_click);
+resetButton.addEventListener("click", reset_on_click);0

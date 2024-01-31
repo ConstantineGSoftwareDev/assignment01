@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+x<!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -12,55 +12,61 @@
 
 <body class="container">
 	<h1>See-N-Say Storymaker</h1>
-	<p id="studentId"></p>
+	
 	<section class="col-md-6 content">
 		<div class="col-md-12 mainContent">
 						<!-- Section with all the buttons for the user to build their story -->
 			<h2 class="col-md-12 storyPart">Create Your Story</h2>
 			
-			<div class="col-md-12 buttonStyle">
-				<button class="btn btn-primary col-md-3 " id="noun1">Noun 1</button>
-				<p class="col-md-9 storyPart" id="choosenNoun1"></p>
+			<div class="col-md-12 col-xs-12 buttonStyle">
+				<button class="btn btn-primary col-md-3 col-xs-4 " id="noun1">Noun 1</button>
+				<p class="col-md-9 col-xs-8 storyPart" id="choosenNoun1"></p>
 			</div>
 
-			<div class="col-md-12 buttonStyle">
-				<button class="btn btn-success col-md-3" id="verb">Verb</button>
-				<p class="col-md-9 storyPart" id="choosenVerb"></p>
+			<div class="col-md-12 col-xs-12 buttonStyle">
+				<button class="btn btn-success col-md-3 col-xs-4" id="verb">Verb</button>
+				<p class="col-md-9 col-xs-8 storyPart" id="choosenVerb"></p>
 			</div>
 
-			<div class="col-md-12 buttonStyle">
-				<button class="purpleBackground col-md-3" id="adjective">Adjective</button>
-				<p class="col-md-9 storyPart " id="choosenAdjective"></p>
+			<div class="col-md-12 col-xs-12 buttonStyle">
+				<button class="purpleBackground col-md-3 col-xs-4" id="adjective">Adjective</button>
+				<p class="col-md-9 col-xs-8 storyPart " id="choosenAdjective"></p>
 			</div>
-			<div class="col-md-12 buttonStyle">
-				<button class="btn btn-danger col-md-3" id="noun2">Noun 2</button>
-				<p class="col-md-9 storyPart" id="choosenNoun2"></p>
+			<div class="col-md-12 col-xs-12 buttonStyle">
+				<button class="btn btn-danger col-md-3 col-xs-4" id="noun2">Noun 2</button>
+				<p class="col-md-9 col-xs-8 storyPart" id="choosenNoun2"></p>
 			</div>
-			<div class="col-md-12 buttonStyle">
-				<button class="btn btn-info col-md-3" id="setting">Setting</button>
-				<p class="col-md-9 storyPart" id="choosenSetting"></p>
+			<div class="col-md-12 col-xs-12 buttonStyle">
+				<button class="btn btn-info col-md-3 col-xs-4" id="setting">Setting</button>
+				<p class="col-md-9 col-xs-8 storyPart" id="choosenSetting"></p>
 			</div>
 			<br/>
 		</div>
 		<div class="col-md-12 buttonStyle storyPart">
+			<p id="studentId"></p>
 			Press the buttons to create your own story
 		</div>
-
+		
 	</section>
 	<section class="col-md-6">
 		<img src="./Images/spongebob.png">
 	</section>
+
+	<section class="col-md-12 buffer"></section>
 	<section class="col-md-12 ">
 		<!-- Section with playback controls to see or hear the story -->
 		
 		<div class="col-md-4">
 
 		</div>
-		<div class="col-md-4 content spacer">
+		<div class="col-md-4 content spacer col-sm-12">
 			<h2 class="storyPart">See Your Story</h2>
-			<button class="btn btn-primary col-md-4" id="playback">Show Story</button>
-			<button class="btn btn-secondary col-md-4" id="random">Random Story</button>
-			<button class="btn btn-danger col-md-4" id="resetButton">Reset</button>
+			
+				<button class="btn btn-primary col-md-4 col-xs-12 lowerButton" id="playback">Show Story</button>
+				<button class="btn btn-secondary col-md-4 col-xs-12 lowerButton" id="random">Random Story</button>
+				<button class="btn btn-danger col-md-4 col-xs-12 lowerButton" id="resetButton">Reset</button>
+ 	
+			
 			<!-- Empty paragraph to display the story -->
 			<p class="storyPart" id="story"></p>
 			<div class="spacer">
