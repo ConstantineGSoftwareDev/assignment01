@@ -4,7 +4,7 @@
 -------------------------------------------------- */
 // Constants for main button query selectors
 
-const studentIdParagraph = document.querySelector("#studentId")
+const studentIdParagraph = document.querySelector("#studentId");
 const noun1Button = document.querySelector("#noun1"); 
 
 const verbButton = document.querySelector("#verb");
