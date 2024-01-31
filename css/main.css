@@ -1,17 +1,44 @@
+/*
+Filename: main.css
+Programmer: Constantine Grigoriadis
+Date: 1/30/2024
+Description:
+
+This page contains the Css for the Storymaker app
+
+Revision History:
+
+Submitted 1/30/2024
+*/
+
+/*
+The body has its z index at 10 so its in the background
+and a background imageof Bikinibottem from spongebob
+*/
 body
 {
     z-index: 10;
     background-image: url("../Images/BikiniBottem.jpg");
 }
 
+
 h1{
     color: 	#004225;
 }
+
+/*
+the main content for our app with an offwhite background
+and some opacity so the background image is still visable
+*/
 .content{
     background-color: antiquewhite;
     opacity: 0.88;
     padding-bottom: 6%;
 }
+
+/*
+this is used to colour up one of the buttons
+*/
 .purpleBackground
 {
     background-color: 	#A020F0;
@@ -21,15 +48,25 @@ h1{
     padding-bottom: 5px;
     border-radius: 5px;
 }
+/*
+this is used to make the button bigger
+*/
 .buttonStyle
 {
     padding-bottom: 10px;
 }
 
+/*
+this is used to colour up one of the buttons with a nice hover effect
+*/
 .purpleBackground:hover
 {
     background-color: 	#800080;
 }
+
+/*
+the next couple styles work for alignment
+*/
 .storyPart
 {
     text-align: center;
@@ -37,6 +74,7 @@ h1{
 h1{
     text-align: center;
 }
+
 
 .lowerButton
 {
@@ -51,15 +89,25 @@ h1{
     padding-bottom: 50px;
     z-index: 10;
 }
-
+/*
+used so that we can add whitespace in some of the content
+*/
 .buffer{
     height: 5%;
 }
-
+/*
+We want the buttons to display on a layer higher than the
+content its displayed on
+*/
 #adjective #noun2 #setting {
     position: relative;
     z-index: 100;
   }
+
+/*
+ when the screen is smaller then 990 px we want the image to be
+ on the centre of thepage
+*/
 @media only screen and (max-width: 990px) {
     img{
         display: block;

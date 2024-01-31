@@ -1,5 +1,16 @@
-// Assignment 1 | COMP1073 Client-Side JavaScript
+/*
+Filename: storymaker.js
+Programmer: Constantine Grigoriadis
+Date: 1/30/2024
+Description:
+this script file contains all the logic for the story maker app
 
+it usings several events to update a gui and play audio
+
+Revision History:
+
+Submitted 1/30/2024
+*/
 /* Variables
 -------------------------------------------------- */
 // Constants for main button query selectors
@@ -64,12 +75,32 @@ var currentNoun2Count = 0;
 var currentSettingCount = 0;
 /* Functions
 -------------------------------------------------- */
+/*
+Function Name: checkStudentIdHeader
+Function Description: 
+This funcion renders the StudentId if its not
+already rendered
+
+It gets called by all the onClick functions
+*/
 function checkStudentIdHeader() {
     if(studentIdParagraph.textContent=="")
     {
         studentIdParagraph.textContent = "Created By: Constantine Grigoriadis - 1234197";
     }
 }
+/*
+Function Name: noun1_on_click
+Function Description: 
+this function is bound to an onclick at the end of the file
+
+it checks if the student id needs to be rendered
+then sets the current noun
+plays the audio for that noun
+checks to see if it exceeds the range of values
+and if it does resets the count
+otherwise it increments the count
+*/
 function noun1_on_click() {
     checkStudentIdHeader();
     // variable to get array element and displaying it
@@ -89,12 +120,17 @@ function noun1_on_click() {
     noun1Output.textContent = currentNoun1;   
 }
 
+/*
+Function Name: noun1Audio
+Parameters:
+currentCount - the current audio clip to play for the noun1
+Function Description: 
+var noun1 = ["The turkey","Mom","Dad","The dog","My teacher","The elephant","The cat"];
+from the above array at the respective index based on the parameter
+it plays the audio for the value using a switch case
+*/
 function noun1Audio(currentCount)
 {
-    /*
-    var noun1 = ["The turkey","Mom","Dad","The dog","My teacher","The elephant","The cat"];
-
-    */
     switch(currentCount)
     {
         case 0:
@@ -127,7 +163,18 @@ function noun1Audio(currentCount)
         break;
     }
 }
+/*
+Function Name: verb_on_click
+Function Description: 
+this function is bound to an onclick at the end of the file
 
+it checks if the student id needs to be rendered
+then sets the current verb
+plays the audio for that verb
+checks to see if it exceeds the range of values
+and if it does resets the count
+otherwise it increments the count
+*/
 function verb_on_click() {
     checkStudentIdHeader();
     currentVerb = verb[currentVerbCount];
@@ -145,13 +192,20 @@ function verb_on_click() {
     console.log(currentVerb);
     currentVerbOutput.textContent = currentVerb;
 }
+/*
+Function Name: VerbAudio
+Parameters:
+currentCount - the current audio clip to play for the verb
+Function Description: 
 
-function VerbAudio(currentCount)
-{
-    /*
 var verb = ["sat on","ate","danced with","saw","doesn't like","kissed"];
 
-    */
+
+from the above array at the respective index based on the parameter
+it plays the audio for the value using a switch case
+*/
+function VerbAudio(currentCount)
+{
     switch(currentCount)
     {
         case 0:
@@ -180,6 +234,19 @@ var verb = ["sat on","ate","danced with","saw","doesn't like","kissed"];
         break;
     }
 }
+/*
+Function Name: adjective_on_click
+Function Description: 
+this function is bound to an onclick at the end of the file
+
+it checks if the student id needs to be rendered
+then sets the current adjective
+plays the audio for that adjective
+checks to see if it exceeds the range of values
+and if it does resets the count
+otherwise it increments the count
+finally it renders its output
+*/
 function adjective_on_click() {
     checkStudentIdHeader();
     currentAdjective = adjective[currentAdjectiveCount];
@@ -196,13 +263,19 @@ function adjective_on_click() {
     console.log(currentAdjective);
     currentAdjectiveOutput.textContent = currentAdjective;
 }
+/*
+Function Name: adjectiveAudio
+Parameters:
+currentCount - the current audio clip to play for the adjective
+Function Description: 
 
-function adjectiveAudio(currentCount)
-{
-    /*
 var adjective = ["a funny","a scary","a goofy","a slimy","a barking","a fat"];
 
-    */
+from the above array at the respective index based on the parameter
+it plays the audio for the value using a switch case
+*/
+function adjectiveAudio(currentCount)
+{
     switch(currentCount)
     {
         case 0:
@@ -231,6 +304,20 @@ var adjective = ["a funny","a scary","a goofy","a slimy","a barking","a fat"];
         break;
     }
 }
+
+/*
+Function Name: noun2_on_click
+Function Description: 
+this function is bound to an onclick at the end of the file
+
+it checks if the student id needs to be rendered
+then sets the current noun2
+plays the audio for that noun2
+checks to see if it exceeds the range of values
+and if it does resets the count
+otherwise it increments the count
+finally it renders its output
+*/
 function noun2_on_click() {
     checkStudentIdHeader();
     currentNoun2 = noun2[currentNoun2Count];
@@ -248,14 +335,20 @@ function noun2_on_click() {
     currentNoun2Output.textContent=currentNoun2;
 }
 
+/*
+Function Name: noun2Audio
+Parameters:
+currentCount - the current audio clip to play for noun2
+Function Description: 
 
-function noun2Audio(currentCount)
-{
-    /*
 var noun2 = ["goat","monkey","fish","cow","frog","bug","worm"];
 
+from the above array at the respective index based on the parameter
+it plays the audio for the value using a switch case
+*/
+function noun2Audio(currentCount)
+{
 
-    */
     switch(currentCount)
     {
         case 0:
@@ -288,6 +381,20 @@ var noun2 = ["goat","monkey","fish","cow","frog","bug","worm"];
         break;
     }
 }
+
+/*
+Function Name: setting_on_click
+Function Description: 
+this function is bound to an onclick at the end of the file
+
+it checks if the student id needs to be rendered
+then sets the current Setting
+plays the audio for that Setting
+checks to see if it exceeds the range of values
+and if it does resets the count
+otherwise it increments the count
+finally it renders its output
+*/
 function setting_on_click() {
     checkStudentIdHeader();
     currentSetting = setting[currentSettingCount];
@@ -305,13 +412,19 @@ function setting_on_click() {
     currentSettingOutput.textContent = currentSetting;
 }
 
+/*
+Function Name: settingAudio
+Parameters:
+currentCount - the current audio clip to play for setting
+Function Description: 
 
-function settingAudio(currentCount)
-{
-    /*
 var setting = ["on the moon","on the chair","in my spaghetti","in my soup","on the grass","in my shoes"]
 
-    */
+from the above array at the respective index based on the parameter
+it plays the audio for the value using a switch case
+*/
+function settingAudio(currentCount)
+{
     switch(currentCount)
     {
         case 0:
@@ -340,13 +453,24 @@ var setting = ["on the moon","on the chair","in my spaghetti","in my soup","on t
         break;
     }
 }
-// concatenate the user story and display
-function playback_on_click() {
-    if(studentIdParagraph.textContent=="")
-    {
-        studentIdParagraph.textContent = "constantine grigoriadis - 1234197";
-    }
+/*
+Function Name: playback_on_click
+Function Description: 
+this function is bound to an onclick at the end of the file
 
+it checks if the student id needs to be rendered
+
+first this function checks to see if each of the five values have been selected
+if all five have been selected it concatinates the story
+Then using the set timeout function it plays the audio for the story
+
+If the values are not input it adds an alertbox
+and plays audio telling the user to select the whole
+story before pressing the button
+
+*/
+function playback_on_click() {
+    checkStudentIdHeader();
     if( currentNoun1 != "" & currentVerb != "" & currentAdjective != "" & currentNoun2!="" & currentSetting !="")
     {
         storyParagraph.classList.remove("alert-danger");
@@ -427,14 +551,37 @@ function playback_on_click() {
 
 }
 
+/*
+Function Name: randomIntFromInterval
+Function Description: 
+This function takes in two values as parameters
+min - the minimum value inclusive
+max - the max value inclusive
+
+it then provides a random number within the range specified
+*/
 function randomIntFromInterval(min, max) { // min and max included 
     return Math.floor(Math.random() * (max - min + 1) + min)
   }
 
-// grabbing random element from arrays, concatenate and display
-function random_on_click() {
+/*
+Function Name: random_on_click
+Function Description: 
+this function is bound to an onclick at the end of the file
+
+it checks if the student id needs to be rendered
+
+it then gets random values for each of the 5 catagories
+and concatinates a story
+
+using the set timeout fuction
+
+it plays each part of the audio for the story
+with 1 second delay between each audio clip
+*/
+  function random_on_click() {
     checkStudentIdHeader();
-    randomNoun1 =  randomIntFromInterval(0,6);
+   randomNoun1 =  randomIntFromInterval(0,6);
    randomVerb = randomIntFromInterval(0,5);
    randomAdjective = randomIntFromInterval(0,5);
    randomNoun2 = randomIntFromInterval(0,6);
@@ -470,7 +617,16 @@ function random_on_click() {
 
 }
 
-
+/*
+Function Name: reset_on_click
+Function Description: 
+This funcion renders the StudentId
+After that it resets 
+all the variables
+all the counts
+all the outputs
+and the story
+*/
 function reset_on_click()
 {
     checkStudentIdHeader();
@@ -509,4 +665,4 @@ settingButton.addEventListener("click",setting_on_click);
 
 playbackButton.addEventListener("click",playback_on_click);
 randomStoryButton.addEventListener("click",random_on_click);
-resetButton.addEventListener("click", reset_on_click);0
+resetButton.addEventListener("click", reset_on_click);

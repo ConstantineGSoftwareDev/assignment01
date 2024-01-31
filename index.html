@@ -1,4 +1,16 @@
-x<!DOCTYPE html>
+<!-- 
+Filename: index.html
+Programmer: Constantine Grigoriadis
+Date: 1/30/2024
+Description:
+
+This page contains the html template for the storymaker app
+
+Revision History:
+
+Submitted 1/30/2024
+-->
+<!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -15,41 +27,64 @@ x<!DOCTYPE html>
 	
 	<section class="col-md-6 content">
 		<div class="col-md-12 mainContent">
-						<!-- Section with all the buttons for the user to build their story -->
+	<!-- Section with all the buttons for the user to build their story -->
 			<h2 class="col-md-12 storyPart">Create Your Story</h2>
-			
+	<!-- 
+		Each button is inside its own div to make the design responsive 
+		This first Div contains the noun 1 button and its output
+	-->
 			<div class="col-md-12 col-xs-12 buttonStyle">
 				<button class="btn btn-primary col-md-3 col-xs-4 " id="noun1">Noun 1</button>
 				<p class="col-md-9 col-xs-8 storyPart" id="choosenNoun1"></p>
 			</div>
-
+	<!-- 
+		Each button is inside its own div to make the design responsive 
+		This second Div contains the verb button and its output
+	-->		
 			<div class="col-md-12 col-xs-12 buttonStyle">
 				<button class="btn btn-success col-md-3 col-xs-4" id="verb">Verb</button>
 				<p class="col-md-9 col-xs-8 storyPart" id="choosenVerb"></p>
 			</div>
-
+	<!-- 
+		Each button is inside its own div to make the design responsive 
+		This third Div contains the adjective button and its output
+	-->
 			<div class="col-md-12 col-xs-12 buttonStyle">
 				<button class="btn btn-success col-md-3 col-xs-4 purpleBackground" id="adjective">Adjective</button>
 				<p class="col-md-9 col-xs-8 storyPart " id="choosenAdjective"></p>
 			</div>
-
+	<!-- 
+		Each button is inside its own div to make the design responsive 
+		This fourth Div contains the noun 2 button and its output
+	-->
 			<div class="col-md-12 col-xs-12 buttonStyle">
 				<button class="btn btn-danger col-md-3 col-xs-4" id="noun2">Noun 2</button>
 				<p class="col-md-9 col-xs-8 storyPart" id="choosenNoun2"></p>
 			</div>
-
+	<!-- 
+		Each button is inside its own div to make the design responsive 
+		This fifth Div contains the setting button and its output
+	-->
 			<div class="col-md-12 col-xs-12 buttonStyle">
 				<button class="btn btn-info col-md-3 col-xs-4" id="setting">Setting</button>
 				<p class="col-md-9 col-xs-8 storyPart" id="choosenSetting"></p>
 			</div>
 			
 		</div>
+
+			<!-- 
+			Below is information for the user to use the app
+			-->
 		<div class="col-md-12 buttonStyle storyPart">
 			<p id="studentId"></p>
 			Press the buttons to create your own story
 		</div>
 		
 	</section>
+			<!-- 
+			a Spongebob image that displays either to the right of the main
+			content or below it in mobile view 
+			-->
 	<section class="col-md-6">
 		<img src="./Images/spongebob.png">
 	</section>
@@ -63,6 +98,10 @@ x<!DOCTYPE html>
 		</div>
 		<div class="col-md-4 content spacer col-sm-12">
 			<h2 class="storyPart">See Your Story</h2>
+				<!-- Here are 3 buttons
+				in mobile they are on top of each other
+				in desktop they share the screen in thirds
+				-->
 			
 				<button class="btn btn-primary col-md-4 col-xs-12 lowerButton" id="playback">Show Story</button>
 				<button class="btn btn-secondary col-md-4 col-xs-12 lowerButton" id="random">Random Story</button>
