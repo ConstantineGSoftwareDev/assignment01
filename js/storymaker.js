@@ -502,9 +502,7 @@ function reset_on_click()
 noun1Button.addEventListener("click",noun1_on_click);
 verbButton.addEventListener("click",verb_on_click );
 
-adjectiveButton.addEventListener("touchstart",adjective_on_click );
-noun2Button.addEventListener("touchstart", noun2_on_click);
-settingButton.addEventListener("touchstart",setting_on_click )
+
 adjectiveButton.addEventListener("click",adjective_on_click);
 noun2Button.addEventListener("click",noun2_on_click);
 settingButton.addEventListener("click",setting_on_click);
