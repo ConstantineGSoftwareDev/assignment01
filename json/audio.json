@@ -1,0 +1,44 @@
+{
+    "noun1": {
+        "The turkey": "./audio/noun1/theTurkey.wav",
+        "Mom": "./audio/noun1/mom.wav",
+        "Dad": "./audio/noun1/dad.wav",
+        "The dog": "./audio/noun1/theDog.wav",
+        "My teacher": "./audio/noun1/MyTeacher.wav",
+        "The elephant": "./audio/noun1/theElephant.wav",
+        "The cat": "./audio/noun1/theCat.wav"
+      },
+      "verb": {
+        "sat on": "./audio/verb/saton.wav",
+        "ate": "./audio/verb/ate.wav",
+        "danced with": "./audio/verb/dancedWith.wav",
+        "saw": "./audio/verb/saw.wav",
+        "doesn't like": "./audio/verb/doesntLike.wav",
+        "kissed": "./audio/verb/kissed.wav"
+      },
+      "adjective": {
+        "a funny": "./audio/adjective/aFunny.wav",
+        "a scary": "./audio/adjective/aScary.wav",
+        "a goofy": "./audio/adjective/aGoofy.wav",
+        "a slimy": "./audio/adjective/aSlimy.wav",
+        "a barking": "./audio/adjective/aBarking.wav",
+        "a fat": "./audio/adjective/aFat.wav"
+      },
+      "noun2": {
+        "goat": "./audio/noun2/goat.wav",
+        "monkey": "./audio/noun2/monkey.wav",
+        "fish": "./audio/noun2/fish.wav",
+        "cow": "./audio/noun2/cow.wav",
+        "frog": "./audio/noun2/frog.wav",
+        "bug": "./audio/noun2/bug.wav",
+        "worm": "./audio/noun2/worm.wav"
+      },
+      "setting": {
+        "on the moon": "./audio/setting/onTheMoon.wav",
+        "on the chair": "./audio/setting/onTheChair.wav",
+        "in my spaghetti": "./audio/setting/inMySpagetti.wav",
+        "in my soup": "./audio/setting/inMySoup.wav",
+        "on the grass": "./audio/setting/onTheGrass.wav",
+        "in my shoes": "./audio/setting/inMyShoes.wav"
+      }
+}

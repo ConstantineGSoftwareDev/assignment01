@@ -48,6 +48,14 @@ const resetButton = document.querySelector("#resetButton")
 
 const storyParagraph = document.querySelector("#story");
 
+//dictonarys for audio files
+
+var noun1Dictionary;
+var verbDictionary ;
+var adjectiveDictionary ;
+var noun2Dictionary;
+var settingDictionary;
+
 // Variables for pre-defined arrays
 
 var noun1 = ["The turkey","Mom","Dad","The dog","My teacher","The elephant","The cat"];
@@ -73,6 +81,7 @@ var currentVerbCount = 0;
 var currentAdjectiveCount = 0;
 var currentNoun2Count = 0;
 var currentSettingCount = 0;
+
 /* Functions
 -------------------------------------------------- */
 /*
@@ -88,6 +97,40 @@ function checkStudentIdHeader() {
     {
         studentIdParagraph.textContent = "Created By: Constantine Grigoriadis - 1234197";
     }
+}
+
+
+async function loadJSONFromFile(filePath) {
+    try {
+      const response = await fetch(filePath);
+      const data = await response.json();
+      return data;
+    } catch (error) {
+      console.error('Error loading JSON:', error);
+      return null;
+    }
+  }
+
+function initApp()
+{
+    // Function to fetch and load JSON data from a file
+  const jsonFilePath = './json/audio.json';
+  loadJSONFromFile(jsonFilePath)
+    .then(data => {
+      if (data) {
+        noun1Dictionary = data.noun1;
+        verbDictionary = data.verb;
+        adjectiveDictionary = data.adjective;
+        noun2Dictionary = data.noun2;
+        settingDictionary = data.setting; 
+        // You can use these dictionaries as needed
+        console.log(noun1Dictionary);
+        console.log(verbDictionary);
+        console.log(adjectiveDictionary);
+        console.log(noun2Dictionary);
+        console.log(settingDictionary);
+      }
+    });
 }
 /*
 Function Name: noun1_on_click
@@ -653,6 +696,9 @@ function reset_on_click()
     
 
 }
+
+//Init function 
+initApp();
 /* Event Listeners
 -------------------------------------------------- */
 noun1Button.addEventListener("click",noun1_on_click);
