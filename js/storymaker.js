@@ -163,6 +163,33 @@ function noun1_on_click() {
     noun1Output.textContent = currentNoun1;   
 }
 
+function playAudio (partOfSentance,key)
+{
+    var audioLocation = "";
+    if(partOfSentance =="noun1")
+    {
+        audioLocation = noun1Dictionary[key];
+    }
+    if(partOfSentance =="verb")
+    {
+        audioLocation = verbDictionary[key];
+    }
+    if(partOfSentance =="adjective")
+    {
+        audioLocation = adjectiveDictionary[key];
+    }
+    if(partOfSentance =="noun2")
+    {
+        audioLocation = verbDictionary[key];
+    }
+    if(partOfSentance =="setting")
+    {
+        audioLocation = settingDictionary[key];
+    }
+    var audio = new Audio(audioLocation);
+    audio.play();
+}
+
 /*
 Function Name: noun1Audio
 Parameters:
@@ -170,41 +197,11 @@ currentCount - the current audio clip to play for the noun1
 Function Description: 
 var noun1 = ["The turkey","Mom","Dad","The dog","My teacher","The elephant","The cat"];
 from the above array at the respective index based on the parameter
-it plays the audio for the value using a switch case
+it plays the audio for the value using a corresponding dictonary
 */
 function noun1Audio(currentCount)
 {
-    switch(currentCount)
-    {
-        case 0:
-            var audio = new Audio('./audio/noun1/theTurkey.wav');
-            audio.play();
-        break;
-        case 1:
-            var audio = new Audio('./audio/noun1/mom.wav');
-            audio.play();
-        break;
-        case 2:
-            var audio = new Audio('./audio/noun1/dad.wav');
-            audio.play();
-        break;
-        case 3:
-            var audio = new Audio('./audio/noun1/theDog.wav');
-            audio.play();
-        break;
-        case 4:
-            var audio = new Audio('./audio/noun1/MyTeacher.wav');
-            audio.play();
-        break;
-        case 5:
-            var audio = new Audio('./audio/noun1/theElephant.wav');
-            audio.play();
-        break;
-        case 6:
-            var audio = new Audio('./audio/noun1/theCat.wav');
-            audio.play();
-        break;
-    }
+    playAudio("noun1",noun1[currentCount])
 }
 /*
 Function Name: verb_on_click
@@ -245,37 +242,11 @@ var verb = ["sat on","ate","danced with","saw","doesn't like","kissed"];
 
 
 from the above array at the respective index based on the parameter
-it plays the audio for the value using a switch case
+it plays the audio for the value using a dictonary
 */
 function VerbAudio(currentCount)
 {
-    switch(currentCount)
-    {
-        case 0:
-            var audio = new Audio('./audio/verb/saton.wav');
-            audio.play();
-        break;
-        case 1:
-            var audio = new Audio('./audio/verb/ate.wav');
-            audio.play();
-        break;
-        case 2:
-            var audio = new Audio('./audio/verb/dancedWith.wav');
-            audio.play();
-        break;
-        case 3:
-            var audio = new Audio('./audio/verb/saw.wav');
-            audio.play();
-        break;
-        case 4:
-            var audio = new Audio('./audio/verb/doesntLike.wav');
-            audio.play();
-        break;
-        case 5:
-            var audio = new Audio('./audio/verb/kissed.wav');
-            audio.play();
-        break;
-    }
+  playAudio("verb",verb[currentCount])
 }
 /*
 Function Name: adjective_on_click
@@ -315,37 +286,11 @@ Function Description:
 var adjective = ["a funny","a scary","a goofy","a slimy","a barking","a fat"];
 
 from the above array at the respective index based on the parameter
-it plays the audio for the value using a switch case
+it plays the audio for the value using a dictonary
 */
 function adjectiveAudio(currentCount)
 {
-    switch(currentCount)
-    {
-        case 0:
-            var audio = new Audio('./audio/adjective/aFunny.wav');
-            audio.play();
-        break;
-        case 1:
-            var audio = new Audio('./audio/adjective/aScary.wav');
-            audio.play();
-        break;
-        case 2:
-            var audio = new Audio('./audio/adjective/aGoofy.wav');
-            audio.play();
-        break;
-        case 3:
-            var audio = new Audio('./audio/adjective/aSlimy.wav');
-            audio.play();
-        break;
-        case 4:
-            var audio = new Audio('./audio/adjective/aBarking.wav');
-            audio.play();
-        break;
-        case 5:
-            var audio = new Audio('./audio/adjective/aFat.wav');
-            audio.play();
-        break;
-    }
+    playAudio("adjective",adjective[currentCount]);
 }
 
 /*
@@ -391,38 +336,7 @@ it plays the audio for the value using a switch case
 */
 function noun2Audio(currentCount)
 {
-
-    switch(currentCount)
-    {
-        case 0:
-            var audio = new Audio('./audio/noun2/goat.wav');
-            audio.play();
-        break;
-        case 1:
-            var audio = new Audio('./audio/noun2/monkey.wav');
-            audio.play();
-        break;
-        case 2:
-            var audio = new Audio('./audio/noun2/fish.wav');
-            audio.play();
-        break;
-        case 3:
-            var audio = new Audio('./audio/noun2/cow.wav');
-            audio.play();
-        break;
-        case 4:
-            var audio = new Audio('./audio/noun2/frog.wav');
-            audio.play();
-        break;
-        case 5:
-            var audio = new Audio('./audio/noun2/bug.wav');
-            audio.play();
-        break;
-        case 6:
-            var audio = new Audio('./audio/noun2/worm.wav');
-            audio.play();
-        break;
-    }
+    playAudio("noun2",noun2[currentCount]);
 }
 
 /*
@@ -468,33 +382,7 @@ it plays the audio for the value using a switch case
 */
 function settingAudio(currentCount)
 {
-    switch(currentCount)
-    {
-        case 0:
-            var audio = new Audio('./audio/setting/onTheMoon.wav');
-            audio.play();
-        break;
-        case 1:
-            var audio = new Audio('./audio/setting/onTheChair.wav');
-            audio.play();
-        break;
-        case 2:
-            var audio = new Audio('./audio/setting/inMySpagetti.wav');
-            audio.play();
-        break;
-        case 3:
-            var audio = new Audio('./audio/setting/inMySoup.wav');
-            audio.play();
-        break;
-        case 4:
-            var audio = new Audio('./audio/setting/onTheGrass.wav');
-            audio.play();
-        break;
-        case 5:
-            var audio = new Audio('./audio/setting/inMyShoes.wav');
-            audio.play();
-        break;
-    }
+    playAudio("setting",setting[currentCount]);
 }
 /*
 Function Name: playback_on_click
