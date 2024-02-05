@@ -180,7 +180,7 @@ function playAudio (partOfSentance,key)
     }
     if(partOfSentance =="noun2")
     {
-        audioLocation = verbDictionary[key];
+        audioLocation = noun2Dictionary[key];
     }
     if(partOfSentance =="setting")
     {
