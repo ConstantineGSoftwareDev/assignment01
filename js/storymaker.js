@@ -402,73 +402,99 @@ story before pressing the button
 */
 function playback_on_click() {
     checkStudentIdHeader();
-    if( currentNoun1 != "" & currentVerb != "" & currentAdjective != "" & currentNoun2!="" & currentSetting !="")
+    if( currentNoun1 != "" | currentVerb != "" | currentAdjective != "" | currentNoun2!="" | currentSetting !="")
     {
         storyParagraph.classList.remove("alert-danger");
-        var story = currentNoun1 + " "+ currentVerb+ " " + currentAdjective+ " " + currentNoun2+ " " + currentSetting;    
+        var story = "";    
+        
+        var timeout = 0;
+        if(currentNoun1!="")
+        {
+            setTimeout(function() {
+                console.log(noun1Count);
+                //your code to be executed after 1 second
+                if(noun1Count == 0)
+                {
+                    noun1Audio(6);
+                }
+                else
+                {
+                    noun1Audio(noun1Count-1);
+                }
+              }, timeout);
+              timeout=timeout+1000; 
+              story+=currentNoun1 + " ";
+        }
+
+        if(currentVerb != "" )
+        {
+            setTimeout(function() {
+                //your code to be executed after 1 second
+                if(currentVerbCount == 0)
+                {
+                    VerbAudio(5);
+                }
+                else
+                {
+                    VerbAudio(currentVerbCount-1);
+                }
+                
+              }, timeout);
+              story+=currentVerb + " ";
+              timeout=timeout+1000; 
+        }
+
+        if (currentAdjective != "")
+        {
+            setTimeout(function() {
+                //your code to be executed after 1 second
+                if(currentAdjectiveCount ==0)
+                {
+                    adjectiveAudio(5);
+                }
+                else
+                {
+                    adjectiveAudio(currentAdjectiveCount-1);
+                }
+              }, timeout);
+              story+=currentAdjective + " ";
+              timeout=timeout+1000; 
+        }
+          
+        if(currentNoun2!="")
+        {
+            setTimeout(function() {
+                //your code to be executed after 1 second
+                if(currentNoun2Count ==0)
+                {
+                    noun2Audio(6);
+                }
+                else
+                {
+                    noun2Audio(currentNoun2Count-1);
+                }
+              }, timeout);
+              story += currentNoun2 + " ";
+              timeout=timeout+1000; 
+        }
+
+        if (currentSetting != "")
+        {
+            setTimeout(function() {
+                //your code to be executed after 1 second
+                if(currentSettingCount==0)
+                {
+                    settingAudio(5);
+    
+                }
+                else
+                {
+                    settingAudio(currentSettingCount-1);
+                }  
+              }, timeout);
+              story+=currentSetting;
+        }    
         storyParagraph.textContent = story;
-        setTimeout(function() {
-            console.log(noun1Count);
-            //your code to be executed after 1 second
-            if(noun1Count == 0)
-            {
-                noun1Audio(6);
-            }
-            else
-            {
-                noun1Audio(noun1Count-1);
-            }
-          }, 0);
-        
-          setTimeout(function() {
-            //your code to be executed after 1 second
-            if(currentVerbCount == 0)
-            {
-                VerbAudio(5);
-            }
-            else
-            {
-                VerbAudio(currentVerbCount-1);
-            }
-            
-          }, 1000);
-
-          setTimeout(function() {
-            //your code to be executed after 1 second
-            if(currentAdjectiveCount ==0)
-            {
-                adjectiveAudio(5);
-            }
-            else
-            {
-                adjectiveAudio(currentAdjectiveCount-1);
-            }
-          }, 2000);
-
-          setTimeout(function() {
-            //your code to be executed after 1 second
-            if(currentNoun2Count ==0)
-            {
-                noun2Audio(6);
-            }
-            else
-            {
-                noun2Audio(currentNoun2Count-1);
-            }
-          }, 3000);
-        
-          setTimeout(function() {
-            //your code to be executed after 1 second
-            if(currentSettingCount==0)
-            {
-                settingAudio(5);
-
-            }
-            else
-            {
-                settingAudio(currentSettingCount-1);
-            }  
-          }, 4000);
     }
     else
     {
